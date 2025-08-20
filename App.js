@@ -7,6 +7,7 @@ import {
   FlatList,
   TouchableOpacity,
   StyleSheet,
+  
 } from "react-native";
 
 export default function App() {
@@ -34,10 +35,11 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <Text> The best Veelaa TO-DO LIST </Text>
       <View style={styles.inputRow}>
         <TextInput
           style={styles.input}
-          placeholder="Enter new task"
+          placeholder="New task."
           value={taskText}
           onChangeText={setTaskText}
         />
@@ -60,7 +62,7 @@ export default function App() {
               </Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => deleteTask(item.id)}>
-              <Text style={styles.delete}>X</Text>
+              <Text style={styles.delete}>Remove Tasks</Text>
             </TouchableOpacity>
           </TouchableOpacity>
         )}
@@ -82,10 +84,14 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     marginTop: 40,
+    backgroundColor: 'grey'
   },
   inputRow: {
     flexDirection: "row",
     marginBottom: 10,
+    color: 'black',
+    border: 'solid black',
+    borderRadius: '10px'
   },
   input: {
     flex: 1,
